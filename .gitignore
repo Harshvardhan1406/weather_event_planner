@@ -4,6 +4,7 @@ __pycache__/
 .env
 node_modules/
 venv/
+venv/lib/python3.9/site-packages/awscli/examples/greengrass/create-connector-definition-version.rst
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
