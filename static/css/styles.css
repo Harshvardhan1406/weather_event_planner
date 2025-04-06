@@ -1,0 +1,103 @@
+/* Custom styles */
+body {
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+  transform: scale(1.02);
+  transition: 0.2s ease-in-out;
+}
+
+/* Background animation */
+#weather-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f0f8ff;
+}
+
+/* Welcome section */
+#welcome-wrapper {
+  position: relative;
+  z-index: 2;
+  height: calc(100vh - 70px); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: #000;
+}
+
+
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/* Glassmorphism style box */
+.glass-box {
+  background: rgba(255, 255, 255, 0.5); /* 50% white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+}
+
+/* Center the list container */
+ul {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column;
+  list-style-position: inside;
+  list-style-type: disc; 
+}
+
+
+ul {
+  list-style-position: outside;
+  padding-left: 0; 
+}
+
+
+li {
+  text-align: center; 
+}

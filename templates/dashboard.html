@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="welcome-wrapper">
+    <div class="glass-box">
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h1 class="text-center mb-4">Weather Based Event & Activity Recomendation</h1>
+        <p class="text-center">Welcome, {{ user.username }}!</p>
+
+        <!-- Search Bar -->
+        <form method="get" action="/dashboard/">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="location" placeholder="Enter location" required>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+
+        <!-- Weather Results -->
+        {% if weather_data %}
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Weather in {{ weather_data.location }}</h5>
+                <p class="card-text">Condition: {{ weather_data.weather }}</p>
+                <p class="card-text">Temperature: {{ weather_data.temperature }}°C</p>
+                <p class="card-text">Description: {{ weather_data.description }}</p>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Activity Suggestions -->
+        {% if activity_suggestions %}
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Suggested Activities</h5>
+                <ul>
+                    {% for activity in activity_suggestions %}
+                    <ul><li>{{ activity }}</li></ul> 
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+     {% csrf_token %}
+    {% if weather_data and activity_suggestions %}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Get this information on your Email !!!</h5>
+            <form method="post" action="">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <input type="email" name="email" class="form-control" placeholder="Enter your email here" required>
+                    <button type="submit" class="btn btn-success">Send</button>
+                </div>
+            </form>
+            {% if email_sent %}
+                <div class="alert alert-success">Email sent successfully!</div>
+            {% elif email_error %}
+                <div class="alert alert-danger">Error: {{ email_error }}</div>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+</div>
+</div>
+</div>
+{% endblock %}
