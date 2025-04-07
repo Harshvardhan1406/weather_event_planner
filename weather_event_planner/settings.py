@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ople*n7^vhd714+fl&&r)k=jg$4(6^9fqt84&6@yv9o!qu-i3b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['22dc7066eb6e48c19ced55ac9a7c7239.vfs.cloud9.eu-west-1.amazonaws.com', '.elasticbeanstalk.com', weather-event-planner.azurewebsites.net', 'localhost', 'weather-event-planner-cuaagvgjf2chgrfu.westeurope-01.azurewebsites.net']
+ALLOWED_HOSTS = ['22dc7066eb6e48c19ced55ac9a7c7239.vfs.cloud9.eu-west-1.amazonaws.com', '.elasticbeanstalk.com', 'localhost', 'weather-event-planner-cuaagvgjf2chgrfu.westeurope-01.azurewebsites.net']
 
 
 # Application definition
