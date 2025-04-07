@@ -132,6 +132,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://22dc7066eb6e48c19ced55ac9a7c7239.vfs.cloud9.eu-west-1.amazonaws.com',  # Add your Cloud9 URL here
+    'https://22dc7066eb6e48c19ced55ac9a7c7239.vfs.cloud9.eu-west-1.amazonaws.com',
+    'https://weather-event-planner-cuaagvgjf2chgrfu.westeurope-01.azurewebsites.net', # Add your Cloud9 URL here
     # You can also add other origins if necessary
 ]
